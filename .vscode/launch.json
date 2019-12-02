@@ -11,16 +11,8 @@
 			"program": "${file}",
 			"console": "integratedTerminal",
 			"args": [
-				"${input:inFile}"
+				"${relativeFileDirname}/../input.txt"
 			]
-		}
-	],
-	"inputs": [
-		{
-			"id": "inFile",
-			"description": "input.txt from AoC",
-			"type": "promptString",
-			"default": "${relativeFileDirname}/../input.txt"
 		}
 	]
 }
