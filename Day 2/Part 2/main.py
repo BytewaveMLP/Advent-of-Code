@@ -1,8 +1,8 @@
 import sys
 import os
 
-if len(sys.argv) < 3:
-	print(f'usage: {os.path.basename(sys.argv[1])} <input.txt> <target>')
+if len(sys.argv) < 2:
+	print(f'usage: {os.path.basename(sys.argv[1])} <input.txt>')
 	exit(1)
 
 with open(sys.argv[1], 'r') as f:
@@ -23,6 +23,6 @@ for noun in range(0, 100):
 			elif mem[pc] == 2:
 				mem[mem[pc+3]] = mem[mem[pc+1]] * mem[mem[pc+2]]
 		
-		if mem[0] == int(sys.argv[2]):
+		if mem[0] == 19690720:
 			print(noun * 100 + verb)
 			exit(0)
