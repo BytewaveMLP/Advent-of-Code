@@ -1,0 +1,9 @@
+input = [(permutations of input settings), 0]
+
+while last amp is running:
+	for amp in amps:
+		while amp is not waiting for input:
+			amp.step()
+			pass input.pop() to amp (if None, set waiting)
+			store output to variable
+		push output to input list for next iteration

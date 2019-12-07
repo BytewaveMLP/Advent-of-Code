@@ -6,6 +6,10 @@ class Intcode():
 		elif mode == 0: return self.tape[addr]
 		else:
 			raise ValueError(f'Argument mode {mode} not implemented')
+	
+	@property
+	def running(self):
+		return self.pc < len(self.tape)
 
 	def __init__(self, tape):
 		self.tape = tape
@@ -19,7 +23,7 @@ class Intcode():
 		self.instructions[code] = fn
 	
 	def step(self):
-		if self.pc >= len(self.tape): return False
+		if not self.running: return False
 
 		inst_raw = self.tape[self.pc]
 		inst = inst_raw % 100
